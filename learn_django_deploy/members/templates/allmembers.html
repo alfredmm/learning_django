@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+    My Club - List of All Members
+{% endblock %}
+
+{% block content %}
+    <div class="mycard">
+        <h1>All Members</h1>
+        <ul>
+            {% for x in mymembers %}
+                <li onclick= "window.location = 'details/{{x.id}}' "> {{x.first_name}} {{x.last_name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
